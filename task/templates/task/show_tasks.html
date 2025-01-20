@@ -3,10 +3,11 @@
 {% block content %}
 <div class="container mt-5">
     <h1 class="mb-4">Task List</h1>
+    <hr>
     <div class="row">
         {% for task in tasks %}
-        <div class="col-md-4 mb-4">
-            <div class="card" style="border: 1px solid #ddd;">
+        <div class="col-md-4 mb-4 border-0">
+            <div class="card" style="border: 1px solid lightgray; background-color: lightyellow;">
                 <div class="card-body">
                     <h5 class="card-title">{{ task.taskTitle }}</h5>
                     <p class="card-text">{{ task.taskDescription }}</p>
@@ -19,7 +20,7 @@
                     <!-- Display Categories as badges -->
                     <div>
                         {% for category in task.categories.all %}
-                            <span class="badge" style="background-color: lightblue;">{{ category.name }}</span>
+                        <span class="badge p-2" style="background-color:lightseagreen; ">{{ category.categoryName }}</span>
                         {% endfor %}
                     </div>
 
